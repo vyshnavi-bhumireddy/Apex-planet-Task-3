@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    min-height: 100vh;
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ================= HOME PAGE BACKGROUND ================= */
+.home-bg {
+    background-image: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2,
+        #6a11cb,
+        #2575fc
+    );
+}
+
+/* ================= CAROUSEL PAGE BACKGROUND ================= */
+.carousel-bg {
+    background-image: linear-gradient(
+        135deg,
+        #ff512f,
+        #dd2476,
+        #ff6a00,
+        #ee0979
+    );
+}
+
+/* ================= API PAGE BACKGROUND ================= */
+.api-bg {
+    background-image: linear-gradient(
+        135deg,
+        #11998e,
+        #38ef7d,
+        #00c6ff,
+        #0072ff
+    );
+}
+
+/* ================= HEADER ================= */
+header {
+    text-align: center;
+    padding: 30px;
+    color: white;
+    background: rgba(0, 0, 0, 0.35);
+    
+}
+
+/* ================= HOME ================= */
+.home {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px;
+    flex-wrap: wrap;
+}
+
+/* ================= LINKS ================= */
+.card-link {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 35px;
+    border-radius: 18px;
+    color: #ffffff;
+    font-size: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-link:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+}
+
+/* ================= CARD ================= */
+.card {
+    background: rgba(255, 255, 255, 0.28);
+   
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    width: 360px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+/* ================= IMAGE ================= */
+img {
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 18px;
+}
+
+/* ================= BUTTON ================= */
+button {
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    border: none;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+}
+
+/* ================= FADE (CAROUSEL) ================= */
+.fade {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade.show {
+    opacity: 1;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+    .home {
+        padding: 40px 20px;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+/* ================= DOT INDICATORS ================= */
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.3);
+}
+
